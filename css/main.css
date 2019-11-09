@@ -1,0 +1,255 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+header, footer, nav, section, aside, menu,
+audio, video, details, article,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* помните об определении стиля focus! */
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* для таблиц надо устанавливать в разметке 'cellspacing="0"' */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+.header {
+  text-align: center;
+  padding: 110px 0 0 0;
+  font-size: 18px;
+  color: #898f8f; }
+  .header h1 {
+    color: #ffcc00;
+    font-family: "Roboto", sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 5px; }
+  .header:after {
+    content: '';
+    display: block;
+    width: 450px;
+    height: 19px;
+    background: url("../img/devider.png") 0 0 no-repeat;
+    margin: 35px auto; }
+
+main {
+  width: 1120px;
+  margin: 0 auto;
+  padding: 0 15px 80px; }
+
+.slider {
+  position: relative; }
+  .slider__content {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .slider__img {
+    width: 50%;
+    padding: 80px 80px 80px 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border-right: 1px solid #ffcc00; }
+    .slider__img-frame {
+      width: 418px;
+      height: 418px;
+      padding: 15px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      overflow: hidden;
+      background: url("../img/image-border.png") 0 0 no-repeat; }
+  .slider__ava {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ffcc00;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .slider__desc {
+    width: 50%;
+    padding: 80px 60px 80px 80px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center; }
+    .slider__desc-title {
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      font-size: 36px;
+      color: #666; }
+      .slider__desc-title:after {
+        content: '';
+        display: block;
+        width: 100px;
+        margin: 30px auto;
+        border-bottom: 1px solid #ffcc00; }
+    .slider__desc-subtitle {
+      color: #666;
+      font-size: 24px;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 30px; }
+    .slider__desc-text {
+      color: #333333;
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      line-height: 24px; }
+      .slider__desc-text:after {
+        content: '';
+        background: url("../img/boxes.png") 0 0 no-repeat;
+        width: 50px;
+        height: 4px;
+        display: block;
+        margin: 30px auto; }
+  .slider__nav {
+    position: absolute;
+    top: 44%;
+    width: 100%; }
+    .slider__nav__link {
+      text-decoration: none;
+      color: #ffcc00;
+      font-size: 40px;
+      font-family: "Raleway", sans-serif;
+      position: absolute;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      opacity: .5; }
+      .slider__nav__link:hover {
+        opacity: 1; }
+      .slider__nav__link--prev {
+        left: 0; }
+      .slider__nav__link--next {
+        right: 0; }
+  .slider__dots {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0; }
+    .slider__dots__link {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background-color: #ffcc00;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      display: inline-block;
+      text-decoration: none;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      .slider__dots__link:hover {
+        background-color: #666; }
+      .slider__dots__link--current {
+        border: 1px solid #ffcc00;
+        background: none;
+        width: 12px;
+        height: 12px;
+        cursor: unset; }
+        .slider__dots__link--current:hover {
+          background: none; }
+
+.block-social {
+  text-align: center;
+  margin-bottom: 30px; }
+  .block-social__link {
+    width: 30px;
+    height: 30px;
+    color: #cccccc;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 2px solid #cccccc;
+    display: inline-block;
+    margin-right: 5px;
+    line-height: 27px;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .block-social__link i {
+      font-size: 80%; }
+    .block-social__link:hover {
+      color: #ffcc00;
+      border-color: #ffcc00;
+      -webkit-transform: scale(1.07);
+          -ms-transform: scale(1.07);
+              transform: scale(1.07); }
+
+.button {
+  display: block;
+  width: 125px;
+  height: 25px;
+  line-height: 25px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  margin: 0 auto;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  border: 1px solid #ffcc00;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .button:hover {
+    background-color: #ffcc00;
+    color: #000;
+    -webkit-transform: scale(1.07);
+        -ms-transform: scale(1.07);
+            transform: scale(1.07); }
