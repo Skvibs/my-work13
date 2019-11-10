@@ -1,0 +1,180 @@
+@import "app/libs/reset" // импортирум reset.css
+
+
+$colorBase: #ffcc00
+$colorSecondary: #898f8f
+
+$fontBase: 'Raleway', sans-serif
+$fontH: 'Roboto', sans-serif
+$fontSecondary: 'Open Sans', sans-serif
+
+body
+	font-family: $fontBase
+.header
+	text-align: center
+	padding: 110px 0 0 0
+	font-size: 18px
+	color: $colorSecondary
+	h1
+		color: $colorBase
+		font-family: $fontH
+		font-size: 60px
+		font-weight: bold
+		margin-top: 5px
+	&:after
+		content: ''
+		display: block
+		width: 450px
+		height: 19px
+		background: url("../img/devider.png") 0 0 no-repeat
+		margin: 35px auto
+main
+	width: 1120px
+	margin: 0 auto
+	padding: 0 15px 80px
+
+.slider
+	position: relative
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-around
+		align-items: center
+	&__img
+		width: 50%
+		padding: 80px 80px 80px 60px
+		box-sizing: border-box
+		flex-grow: 1
+		border-right: 1px solid #ffcc00
+		&-frame
+			width: 418px
+			height: 418px
+			padding: 15px
+			box-sizing: border-box
+			overflow: hidden
+			background: url("../img/image-border.png") 0 0 no-repeat
+	&__ava
+		display: inline-block
+		width: 100%
+		height: auto
+		border: 1px solid #ffcc00
+		box-sizing: border-box
+	&__desc
+		width: 50%
+		padding: 80px 60px 80px 80px
+		box-sizing: border-box
+		flex-grow: 1
+		text-align: center
+		&-title
+			font-family: $fontH
+			font-weight: bold
+			font-size: 36px
+			color: #666
+			&:after
+				content: ''
+				display: block
+				width: 100px
+				margin: 30px auto
+				border-bottom: 1px solid #ffcc00
+		&-subtitle
+			color: #666
+			font-size: 24px
+			font-family: $fontBase
+			margin-bottom: 30px
+		&-text
+			color: #333333
+			font-family: $fontBase
+			font-size: 14px
+			line-height: 24px
+			&:after
+				content: ''
+				background: url("../img/boxes.png") 0 0 no-repeat
+				width: 50px
+				height: 4px
+				display: block
+				margin: 30px auto
+	&__nav
+		position: absolute
+		top: 44%
+		width: 100%
+		&__link
+			text-decoration: none
+			color: #ffcc00
+			font-size: 40px
+			font-family: $fontBase
+			position: absolute
+			transition: all .3s
+			opacity: .5
+			&:hover
+				opacity: 1
+			&--prev
+				left: 0
+			&--next
+				right: 0
+	&__dots
+		width: 100%
+		text-align: center
+		margin: 40px 0
+		&__link
+			width: 10px
+			height: 10px
+			margin: 0 5px
+			background-color: #ffcc00
+			border-radius: 50%
+			display: inline-block
+			text-decoration: none
+			box-sizing: border-box
+			transition: all .3s
+			&:hover
+				background-color: #666
+			&--current
+				border: 1px solid #ffcc00
+				background: none
+				width: 12px
+				height: 12px
+				cursor: unset
+				&:hover
+					background: none
+.block-social
+	text-align: center
+	margin-bottom: 30px
+	&__link
+		width: 30px
+		height: 30px
+		color: #cccccc
+		border-radius: 50%
+		box-sizing: border-box
+		border: 2px solid #cccccc
+		display: inline-block
+		margin-right: 5px
+		line-height: 27px
+		text-decoration: none
+		transition: all .3s
+		i
+			font-size: 80%
+		&:hover
+			color: #ffcc00
+			border-color: #ffcc00
+			transform: scale(1.07)
+.button
+	display: block
+	width: 125px
+	height: 25px
+	line-height: 25px
+	transition: all .3s
+	margin: 0 auto
+	color: #666
+	font-family: $fontSecondary
+	font-weight: bold
+	border: 1px solid #ffcc00
+	font-size: 14px
+	text-transform: uppercase
+	text-decoration: none
+	&:hover
+		background-color: #ffcc00
+		color: #000
+		transform: scale(1.07)
+
